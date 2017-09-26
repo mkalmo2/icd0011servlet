@@ -1,5 +1,12 @@
+plugins {
+    id 'org.akhikhl.gretty' version '2.0.0'
+}
+
 apply plugin: 'war'
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+repositories {
+    jcenter()
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
