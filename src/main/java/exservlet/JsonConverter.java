@@ -14,6 +14,13 @@ public class JsonConverter {
         post.setHidden(false);
         post.setTags(Arrays.asList("java", "json"));
 
+        // a) Object -> Json
+        // String json = new ObjectMapper()...
+
+
+        // b) Json -> Object
+        // Post post = ...
+
     }
 
 
