@@ -10,7 +10,7 @@ public class Util {
     public static String readStream(InputStream is) {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(is));
 
-        return buffer.lines().collect(Collectors.joining("\n"));
+        return buffer.lines().collect(Collectors.joining(System.lineSeparator()));
     }
 
 }
