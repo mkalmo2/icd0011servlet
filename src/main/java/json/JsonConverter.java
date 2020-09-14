@@ -1,6 +1,6 @@
-package exservlet;
+package json;
 
-import exservlet.model.Post;
+import model.Post;
 
 import java.util.Arrays;
 
