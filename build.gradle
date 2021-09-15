@@ -1,18 +1,32 @@
 plugins {
     id 'war'
-    id 'org.gretty' version '3.0.3'
+    id 'org.gretty' version '3.0.6'
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
-sourceCompatibility = 11
+sourceCompatibility = 16
 
 dependencies {
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.11.2'
-    
-    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+
+    compileOnly group: 'javax.servlet',
+            name: 'javax.servlet-api',
+            version: '4.0.1'
+
+    implementation group: 'com.fasterxml.jackson.core',
+            name: 'jackson-databind',
+            version: '2.12.5'
+
+    compileOnly group: 'org.projectlombok',
+            name: 'lombok',
+            version: '1.18.20'
+
+    annotationProcessor group: 'org.projectlombok',
+            name: 'lombok',
+            version: '1.18.20'
+
 }
 
 gretty {
