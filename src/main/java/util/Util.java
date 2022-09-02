@@ -8,7 +8,7 @@ public class Util {
 
     public static String readStream(InputStream is) {
         try (Scanner scanner = new Scanner(is,
-                StandardCharsets.UTF_8.name()).useDelimiter("\\A")) {
+                StandardCharsets.UTF_8).useDelimiter("\\A")) {
 
             return scanner.hasNext() ? scanner.next() : "";
         }
