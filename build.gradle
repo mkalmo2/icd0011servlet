@@ -1,13 +1,15 @@
 plugins {
-    id 'war'
-    id 'org.gretty' version '4.0.3'
+    id 'java'
+    id 'org.gretty' version '4.1.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
     mavenCentral()
 }
-
-sourceCompatibility = 17
 
 dependencies {
 
@@ -17,15 +19,15 @@ dependencies {
 
     implementation group: 'com.fasterxml.jackson.core',
             name: 'jackson-databind',
-            version: '2.13.4'
+            version: '2.15.1'
 
     compileOnly group: 'org.projectlombok',
             name: 'lombok',
-            version: '1.18.24'
+            version: '1.18.26'
 
     annotationProcessor group: 'org.projectlombok',
             name: 'lombok',
-            version: '1.18.24'
+            version: '1.18.26'
 
 }
 
