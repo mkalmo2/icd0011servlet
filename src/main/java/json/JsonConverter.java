@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class JsonConverter {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Post post = new Post();
         post.setId(1L);
@@ -16,7 +16,6 @@ public class JsonConverter {
 
         // a) Object -> Json
         // String json = new ObjectMapper()...
-
 
         // b) Json -> Object
         // Post post = ...
