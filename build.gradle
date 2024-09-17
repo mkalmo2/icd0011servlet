@@ -28,8 +28,10 @@ gretty {
     contextPath = '/'
 }
 
+/*
 pmd {
     consoleOutput = true
     toolVersion = "7.5.0"
-    ruleSets = ["...path to.../pmd/ruleset.xml"]
+    ruleSets = [ "...path to.../pmd/ruleset.xml" ]
 }
+*/
