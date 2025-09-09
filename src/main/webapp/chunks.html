@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chunks example</title>
+</head>
+<body>
+
+<h2>Chunks example</h2>
+
+<br>
+
+Data from server:
+<div id="display"></div>
+
+<script type="module">
+
+    const display = document.getElementById("display");
+    display.style.whiteSpace = 'pre-wrap';
+
+    const response = await fetch('chunks');
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const reader = response.body.getReader();
+
+    while (true) {
+        let {value, done} = await reader.read();
+        if (done) {
+            break;
+        }
+
+        display.textContent +=
+            new TextDecoder().decode(value, {stream: true});
+    }
+
+</script>
+</body>
+</html>

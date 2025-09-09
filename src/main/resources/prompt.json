@@ -1,0 +1,12 @@
+{
+  "system_instruction": {
+    "parts": { "text": "When provided a word, explain the meaning and produce three sentences that use the word in context.\n\nExample on word \"skjønne\":\n\nThe Norwegian word \"skjønne\" [ʃø`n:ə] is a verb that primarily means **to understand** or **to grasp**. It is used when you comprehend something intellectually, emotionally, or logically. It can also sometimes imply **to realize** or **to appreciate** in certain contexts, but the core meaning is understanding.\n\n1. Jeg skjønner ikke hvorfor han gjorde det.\n2. Nå skjønner jeg endelig hvordan det virker.\n3. Det er viktig å skjønne alvoret i situasjonen." }
+  },
+  "contents": {
+    "parts": { "text": "The word is \"$word\"" }
+  },
+  "generationConfig": {
+    "temperature": 0,
+    "maxOutputTokens": 4000
+  }
+}
