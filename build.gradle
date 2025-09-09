@@ -31,7 +31,7 @@ gretty {
 /*
 pmd {
     consoleOutput = true
-    toolVersion = "7.5.0"
+    toolVersion = "7.15.0"
     ruleSets = [ "...path to.../pmd/ruleset.xml" ]
 }
 */

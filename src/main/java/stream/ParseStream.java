@@ -11,13 +11,13 @@ import java.nio.charset.StandardCharsets;
 public class ParseStream {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        byte[] jsonBytes1 = ("""
+        byte[] jsonBytes1 = """
                 { "name": "Alice", "a
-                """).trim().getBytes(StandardCharsets.UTF_8);
+                """.trim().getBytes(StandardCharsets.UTF_8);
 
-        byte[] jsonBytes2 = ("""
+        byte[] jsonBytes2 ="""
                 ge": 20 }
-                """.trim()).getBytes(StandardCharsets.UTF_8);
+                """.trim().getBytes(StandardCharsets.UTF_8);
 
         JsonParser parser = new ObjectMapper().getFactory()
                 .createNonBlockingByteArrayParser();
@@ -49,7 +49,6 @@ public class ParseStream {
                     System.out.println(fieldName + ": " + parser.getText());
                 }
             }
-
         }
     }
 }
