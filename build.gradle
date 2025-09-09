@@ -1,5 +1,5 @@
 plugins {
-    id 'war'
+    id 'java'
     id 'org.gretty' version '4.1.7'
     id 'pmd'
 }
@@ -28,10 +28,14 @@ gretty {
     contextPath = '/'
 }
 
-/*
 pmd {
     consoleOutput = true
     toolVersion = "7.15.0"
     ruleSets = [ "...path to.../pmd/ruleset.xml" ]
 }
-*/
+
+// Do not run PMD on every build.
+// Run it only when specifically requested (e.g. > gradle pmdMain)
+tasks.withType(Pmd).configureEach {
+    onlyIf { gradle.startParameter.taskNames.contains('pmdMain') }
+}
