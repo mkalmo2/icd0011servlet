@@ -13,7 +13,7 @@ Servlet
     ObjectMapperi abil Post objektide list.
 
     Tüübi parameetriks peate kirjutama Post\[\].class või new
-    TypeReference\<List`<Post>`{=html}\>() {}
+    TypeReference\<List\<Post\>\>() {}
 
 2.  Käivitage veebiserver ja veenduge projektis olev HelloServlet, et
     vastab (http://localhost:8080/hello).
